@@ -1,0 +1,638 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6eb4885991aef4bb8e8696cd587c3d, type: 3}
+  m_Name: AudioLink Emission
+  m_EditorClassIdentifier: 
+  Id: VRLabs.TSR.Emission.AudioLink
+  Name: AudioLink Emission
+  Version: 1.0
+  Author: VRLabs
+  Description: AudioLink options for emission
+  EnableProperties:
+  - Name: _EnableAudioLink
+    DisplayName: Enable AudioLink
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 1
+  - Name: _EnableEmission
+    DisplayName: Enable Emission
+    Type: 
+    DefaultValue: 
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+    EnableValue: 1
+  Properties:
+  - Name: _AudioLinkEmissionUseBand
+    DisplayName: Audiolink use band
+    Type: Float
+    DefaultValue: 0.0
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+  - Name: _AudioLinkEmissionBandIndex
+    DisplayName: Audiolink band index
+    Type: Float
+    DefaultValue: 0.0
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+  - Name: _AudioLinkEmissionUseColor
+    DisplayName: Audiolink use color
+    Type: Float
+    DefaultValue: 0.0
+    DefaultTextureAsset: {fileID: 0}
+    Attributes: []
+  ModuleDependencies:
+  - VRLabs.TSR.Emission
+  - VRLabs.TSR.AudioLink.Core
+  IncompatibleWith: []
+  Templates: []
+  Functions:
+  - Name: AddAudioLinkToEmission
+    AppendAfter: CalculateEmission
+    Queue: 100
+    ShaderFunctionCode: {fileID: -544282384758852595, guid: e0e9d146380d3ef498e463dce673ee45,
+      type: 3}
+    UsedVariables:
+    - Name: _AudioLinkEmissionUseColor
+      Type: 4
+      CustomType: 
+    - Name: _AudioLinkEmissionBandIndex
+      Type: 4
+      CustomType: 
+    - Name: _AudioLinkEmissionUseBand
+      Type: 4
+      CustomType: 
+    VariableKeywords:
+    - DEFAULT_VARIABLES
+    - META_VARIABLES
+    CodeKeywords:
+    - DEFAULT_CODE
+    - META_CODE
+  AdditionalSerializedData: '{"module":"{\r\n    \"$id\": 0,\r\n    \"$type\": \"0|VRLabs.ToonyStandardRebuild.ModuleUI,
+    VRLabs.ToonyStandardRebuild\",\r\n    \"Name\": \"AudioLink Emission\",\r\n   
+    \"Sections\": {\r\n        \"$id\": 1,\r\n        \"$type\": \"1|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.SectionUI,
+    VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n        \"$rlength\": 1,\r\n       
+    \"$rcontent\": [\r\n            {\r\n                \"$id\": 2,\r\n               
+    \"$type\": \"2|VRLabs.ToonyStandardRebuild.SectionUI, VRLabs.ToonyStandardRebuild\",\r\n               
+    \"SectionName\": \"Emission Section\",\r\n                \"IsPermanent\": false,\r\n               
+    \"ActivatePropertyName\": \"_EnableEmission\",\r\n                \"EnableValue\":
+    1,\r\n                \"DisableValue\": 0,\r\n                \"Controls\": {\r\n                   
+    \"$id\": 3,\r\n                    \"$type\": \"3|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.ControlUI,
+    VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n                    \"$rlength\":
+    3,\r\n                    \"$rcontent\": [\r\n                        {\r\n                           
+    \"$id\": 4,\r\n                            \"$type\": \"4|VRLabs.ToonyStandardRebuild.ControlUI,
+    VRLabs.ToonyStandardRebuild\",\r\n                            \"Name\": \"AudioLink
+    Emission Space\",\r\n                            \"AppendAfter\": \"\",\r\n                           
+    \"UIControlType\": {\r\n                                \"$id\": 5,\r\n                               
+    \"$type\": \"5|System.RuntimeType, mscorlib\",\r\n                               
+    \"VRLabs.ToonyStandardRebuild.SimpleShaderInspectors.Controls.SpaceControl, VRLabs.ToonyStandardRebuild.SimpleShaderInspectors\"\r\n                           
+    },\r\n                            \"Parameters\": {\r\n                               
+    \"$id\": 6,\r\n                                \"$type\": \"6|System.Collections.Generic.List`1[[System.Object,
+    mscorlib]], mscorlib\",\r\n                                \"$rlength\": 1,\r\n                               
+    \"$rcontent\": [\r\n                                    {\r\n                                       
+    \"$id\": 7,\r\n                                        \"$type\": \"7|System.Int32,
+    mscorlib\",\r\n                                        0\r\n                                   
+    }\r\n                                ]\r\n                            },\r\n                           
+    \"Controls\": {\r\n                                \"$id\": 8,\r\n                               
+    \"$type\": 3,\r\n                                \"$rlength\": 0,\r\n                               
+    \"$rcontent\": [\r\n                                ]\r\n                           
+    }\r\n                        },\r\n                        {\r\n                           
+    \"$id\": 9,\r\n                            \"$type\": 4,\r\n                           
+    \"Name\": \"Disabled AudioLink Emission View\",\r\n                           
+    \"AppendAfter\": \"\",\r\n                            \"UIControlType\": {\r\n                               
+    \"$id\": 10,\r\n                                \"$type\": 5,\r\n                               
+    \"VRLabs.ToonyStandardRebuild.SimpleShaderInspectors.Controls.ConditionalControlContainer,
+    VRLabs.ToonyStandardRebuild.SimpleShaderInspectors\"\r\n                           
+    },\r\n                            \"Parameters\": {\r\n                               
+    \"$id\": 11,\r\n                                \"$type\": 6,\r\n                               
+    \"$rlength\": 2,\r\n                                \"$rcontent\": [\r\n                                   
+    {\r\n                                        \"$id\": 12,\r\n                                       
+    \"$type\": \"8|System.String, mscorlib\",\r\n                                       
+    \"_EnableAudioLink\"\r\n                                    },\r\n                                   
+    {\r\n                                        \"$id\": 13,\r\n                                       
+    \"$type\": \"9|System.Single, mscorlib\",\r\n                                       
+    0\r\n                                    }\r\n                               
+    ]\r\n                            },\r\n                            \"Controls\":
+    {\r\n                                \"$id\": 14,\r\n                               
+    \"$type\": 3,\r\n                                \"$rlength\": 1,\r\n                               
+    \"$rcontent\": [\r\n                                    {\r\n                                       
+    \"$id\": 15,\r\n                                        \"$type\": 4,\r\n                                       
+    \"Name\": \"AudioLink Emission Disabled Info\",\r\n                                       
+    \"AppendAfter\": \"\",\r\n                                        \"UIControlType\":
+    {\r\n                                            \"$id\": 16,\r\n                                           
+    \"$type\": 5,\r\n                                            \"VRLabs.ToonyStandardRebuild.SimpleShaderInspectors.Controls.HelpBoxControl,
+    VRLabs.ToonyStandardRebuild.SimpleShaderInspectors\"\r\n                                       
+    },\r\n                                        \"Parameters\": {\r\n                                           
+    \"$id\": 17,\r\n                                            \"$type\": 6,\r\n                                           
+    \"$rlength\": 2,\r\n                                            \"$rcontent\":
+    [\r\n                                                {\r\n                                                   
+    \"$id\": 18,\r\n                                                    \"$type\":
+    \"10|UnityEditor.MessageType, UnityEditor\",\r\n                                                   
+    1\r\n                                                },\r\n                                               
+    {\r\n                                                    \"$id\": 19,\r\n                                                   
+    \"$type\": \"11|System.Boolean, mscorlib\",\r\n                                                   
+    true\r\n                                                }\r\n                                           
+    ]\r\n                                        },\r\n                                       
+    \"Controls\": {\r\n                                            \"$id\": 20,\r\n                                           
+    \"$type\": 3,\r\n                                            \"$rlength\": 0,\r\n                                           
+    \"$rcontent\": [\r\n                                            ]\r\n                                       
+    }\r\n                                    }\r\n                               
+    ]\r\n                            }\r\n                        },\r\n                       
+    {\r\n                            \"$id\": 21,\r\n                           
+    \"$type\": 4,\r\n                            \"Name\": \"Enabled AudioLink Emission
+    View\",\r\n                            \"AppendAfter\": \"\",\r\n                           
+    \"UIControlType\": $iref:10,\r\n                            \"Parameters\": {\r\n                               
+    \"$id\": 22,\r\n                                \"$type\": 6,\r\n                               
+    \"$rlength\": 2,\r\n                                \"$rcontent\": [\r\n                                   
+    {\r\n                                        \"$id\": 23,\r\n                                       
+    \"$type\": 8,\r\n                                        \"_EnableAudioLink\"\r\n                                   
+    },\r\n                                    {\r\n                                       
+    \"$id\": 24,\r\n                                        \"$type\": 9,\r\n                                       
+    1\r\n                                    }\r\n                               
+    ]\r\n                            },\r\n                            \"Controls\":
+    {\r\n                                \"$id\": 25,\r\n                               
+    \"$type\": 3,\r\n                                \"$rlength\": 2,\r\n                               
+    \"$rcontent\": [\r\n                                    {\r\n                                       
+    \"$id\": 26,\r\n                                        \"$type\": 4,\r\n                                       
+    \"Name\": \"AudioLink Band Enabled\",\r\n                                       
+    \"AppendAfter\": \"\",\r\n                                        \"UIControlType\":
+    {\r\n                                            \"$id\": 27,\r\n                                           
+    \"$type\": 5,\r\n                                            \"VRLabs.ToonyStandardRebuild.SimpleShaderInspectors.Controls.ToggleListControl,
+    VRLabs.ToonyStandardRebuild.SimpleShaderInspectors\"\r\n                                       
+    },\r\n                                        \"Parameters\": {\r\n                                           
+    \"$id\": 28,\r\n                                            \"$type\": 6,\r\n                                           
+    \"$rlength\": 3,\r\n                                            \"$rcontent\":
+    [\r\n                                                {\r\n                                                   
+    \"$id\": 29,\r\n                                                    \"$type\":
+    8,\r\n                                                    \"_AudioLinkEmissionUseBand\"\r\n                                               
+    },\r\n                                                {\r\n                                                   
+    \"$id\": 30,\r\n                                                    \"$type\":
+    9,\r\n                                                    0\r\n                                               
+    },\r\n                                                {\r\n                                                   
+    \"$id\": 31,\r\n                                                    \"$type\":
+    9,\r\n                                                    1\r\n                                               
+    }\r\n                                            ]\r\n                                       
+    },\r\n                                        \"Controls\": {\r\n                                           
+    \"$id\": 32,\r\n                                            \"$type\": 3,\r\n                                           
+    \"$rlength\": 1,\r\n                                            \"$rcontent\":
+    [\r\n                                                {\r\n                                                   
+    \"$id\": 33,\r\n                                                    \"$type\":
+    4,\r\n                                                    \"Name\": \"AudioLink
+    Band\",\r\n                                                    \"AppendAfter\":
+    \"\",\r\n                                                    \"UIControlType\":
+    {\r\n                                                        \"$id\": 34,\r\n                                                       
+    \"$type\": 5,\r\n                                                        \"VRLabs.ToonyStandardRebuild.SSICustomControls.ListSelectorControl,
+    VRLabs.ToonyStandardRebuild\"\r\n                                                   
+    },\r\n                                                    \"Parameters\": {\r\n                                                       
+    \"$id\": 35,\r\n                                                        \"$type\":
+    6,\r\n                                                        \"$rlength\": 2,\r\n                                                       
+    \"$rcontent\": [\r\n                                                           
+    {\r\n                                                                \"$id\":
+    36,\r\n                                                                \"$type\":
+    8,\r\n                                                                \"_AudioLinkEmissionBandIndex\"\r\n                                                           
+    },\r\n                                                            {\r\n                                                               
+    \"$id\": 37,\r\n                                                               
+    \"$type\": \"12|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.SSICustomControls.ListSelectorControl+ListSelectorItem,
+    VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n                                                               
+    \"$rlength\": 8,\r\n                                                               
+    \"$rcontent\": [\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 38,\r\n                                                                       
+    \"$type\": \"13|VRLabs.ToonyStandardRebuild.SSICustomControls.ListSelectorControl+ListSelectorItem,
+    VRLabs.ToonyStandardRebuild\",\r\n                                                                       
+    \"Name\": \"Bass\",\r\n                                                                       
+    \"Index\": 0,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 39,\r\n                                                                           
+    \"$type\": \"14|VRLabs.ToonyStandardRebuild.UpdateData, VRLabs.ToonyStandardRebuild\",\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 40,\r\n                                                                               
+    \"$type\": \"15|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.UpdateProp`1[[System.Single,
+    mscorlib]], VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 41,\r\n                                                                               
+    \"$type\": \"16|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.UpdateProp`1[[UnityEngine.Color,
+    UnityEngine.CoreModule]], VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 42,\r\n                                                                               
+    \"$type\": \"17|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.UpdateProp`1[[UnityEngine.Texture,
+    UnityEngine.CoreModule]], VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 43,\r\n                                                                               
+    \"$type\": \"18|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.UpdateProp`1[[System.Boolean,
+    mscorlib]], VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 44,\r\n                                                                               
+    \"$type\": \"19|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.UpdateProp`1[[System.String,
+    mscorlib]], VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    },\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 45,\r\n                                                                       
+    \"$type\": 13,\r\n                                                                       
+    \"Name\": \"LowMid\",\r\n                                                                       
+    \"Index\": 1,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 46,\r\n                                                                           
+    \"$type\": 14,\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 47,\r\n                                                                               
+    \"$type\": 15,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 48,\r\n                                                                               
+    \"$type\": 16,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 49,\r\n                                                                               
+    \"$type\": 17,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 50,\r\n                                                                               
+    \"$type\": 18,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 51,\r\n                                                                               
+    \"$type\": 19,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    },\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 52,\r\n                                                                       
+    \"$type\": 13,\r\n                                                                       
+    \"Name\": \"HighMid\",\r\n                                                                       
+    \"Index\": 2,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 53,\r\n                                                                           
+    \"$type\": 14,\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 54,\r\n                                                                               
+    \"$type\": 15,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 55,\r\n                                                                               
+    \"$type\": 16,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 56,\r\n                                                                               
+    \"$type\": 17,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 57,\r\n                                                                               
+    \"$type\": 18,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 58,\r\n                                                                               
+    \"$type\": 19,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    },\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 59,\r\n                                                                       
+    \"$type\": 13,\r\n                                                                       
+    \"Name\": \"Tremble\",\r\n                                                                       
+    \"Index\": 3,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 60,\r\n                                                                           
+    \"$type\": 14,\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 61,\r\n                                                                               
+    \"$type\": 15,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 62,\r\n                                                                               
+    \"$type\": 16,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 63,\r\n                                                                               
+    \"$type\": 17,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 64,\r\n                                                                               
+    \"$type\": 18,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 65,\r\n                                                                               
+    \"$type\": 19,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    },\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 66,\r\n                                                                       
+    \"$type\": 13,\r\n                                                                       
+    \"Name\": \"RMS Intensity Left\",\r\n                                                                       
+    \"Index\": 4,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 67,\r\n                                                                           
+    \"$type\": 14,\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 68,\r\n                                                                               
+    \"$type\": 15,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 69,\r\n                                                                               
+    \"$type\": 16,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 70,\r\n                                                                               
+    \"$type\": 17,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 71,\r\n                                                                               
+    \"$type\": 18,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 72,\r\n                                                                               
+    \"$type\": 19,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    },\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 73,\r\n                                                                       
+    \"$type\": 13,\r\n                                                                       
+    \"Name\": \"Peak Intensity  Left\",\r\n                                                                       
+    \"Index\": 5,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 74,\r\n                                                                           
+    \"$type\": 14,\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 75,\r\n                                                                               
+    \"$type\": 15,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 76,\r\n                                                                               
+    \"$type\": 16,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 77,\r\n                                                                               
+    \"$type\": 17,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 78,\r\n                                                                               
+    \"$type\": 18,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 79,\r\n                                                                               
+    \"$type\": 19,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    },\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 80,\r\n                                                                       
+    \"$type\": 13,\r\n                                                                       
+    \"Name\": \"RMS Intensity Right\",\r\n                                                                       
+    \"Index\": 6,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 81,\r\n                                                                           
+    \"$type\": 14,\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 82,\r\n                                                                               
+    \"$type\": 15,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 83,\r\n                                                                               
+    \"$type\": 16,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 84,\r\n                                                                               
+    \"$type\": 17,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 85,\r\n                                                                               
+    \"$type\": 18,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 86,\r\n                                                                               
+    \"$type\": 19,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    },\r\n                                                                   
+    {\r\n                                                                       
+    \"$id\": 87,\r\n                                                                       
+    \"$type\": 13,\r\n                                                                       
+    \"Name\": \"Peak Intensity RIght\",\r\n                                                                       
+    \"Index\": 7,\r\n                                                                       
+    \"PropsOnSelected\": {\r\n                                                                           
+    \"$id\": 88,\r\n                                                                           
+    \"$type\": 14,\r\n                                                                           
+    \"FloatProperties\": {\r\n                                                                               
+    \"$id\": 89,\r\n                                                                               
+    \"$type\": 15,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"ColorProperties\": {\r\n                                                                               
+    \"$id\": 90,\r\n                                                                               
+    \"$type\": 16,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"TextureProperties\": {\r\n                                                                               
+    \"$id\": 91,\r\n                                                                               
+    \"$type\": 17,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"Keywords\": {\r\n                                                                               
+    \"$id\": 92,\r\n                                                                               
+    \"$type\": 18,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"OverrideTags\": {\r\n                                                                               
+    \"$id\": 93,\r\n                                                                               
+    \"$type\": 19,\r\n                                                                               
+    \"$rlength\": 0,\r\n                                                                               
+    \"$rcontent\": [\r\n                                                                               
+    ]\r\n                                                                           
+    },\r\n                                                                           
+    \"SetRenderQueue\": false,\r\n                                                                           
+    \"RenderQueue\": -1\r\n                                                                       
+    }\r\n                                                                    }\r\n                                                               
+    ]\r\n                                                            }\r\n                                                       
+    ]\r\n                                                    },\r\n                                                   
+    \"Controls\": {\r\n                                                        \"$id\":
+    94,\r\n                                                        \"$type\": 3,\r\n                                                       
+    \"$rlength\": 0,\r\n                                                        \"$rcontent\":
+    [\r\n                                                        ]\r\n                                                   
+    }\r\n                                                }\r\n                                           
+    ]\r\n                                        }\r\n                                   
+    },\r\n                                    {\r\n                                       
+    \"$id\": 95,\r\n                                        \"$type\": 4,\r\n                                       
+    \"Name\": \"Emission AudioLink Color\",\r\n                                       
+    \"AppendAfter\": \"\",\r\n                                        \"UIControlType\":
+    {\r\n                                            \"$id\": 96,\r\n                                           
+    \"$type\": 5,\r\n                                            \"VRLabs.ToonyStandardRebuild.SimpleShaderInspectors.Controls.ToggleControl,
+    VRLabs.ToonyStandardRebuild.SimpleShaderInspectors\"\r\n                                       
+    },\r\n                                        \"Parameters\": {\r\n                                           
+    \"$id\": 97,\r\n                                            \"$type\": 6,\r\n                                           
+    \"$rlength\": 3,\r\n                                            \"$rcontent\":
+    [\r\n                                                {\r\n                                                   
+    \"$id\": 98,\r\n                                                    \"$type\":
+    8,\r\n                                                    \"_AudioLinkEmissionUseColor\"\r\n                                               
+    },\r\n                                                {\r\n                                                   
+    \"$id\": 99,\r\n                                                    \"$type\":
+    9,\r\n                                                    0\r\n                                               
+    },\r\n                                                {\r\n                                                   
+    \"$id\": 100,\r\n                                                    \"$type\":
+    9,\r\n                                                    1\r\n                                               
+    }\r\n                                            ]\r\n                                       
+    },\r\n                                        \"Controls\": {\r\n                                           
+    \"$id\": 101,\r\n                                            \"$type\": 3,\r\n                                           
+    \"$rlength\": 0,\r\n                                            \"$rcontent\":
+    [\r\n                                            ]\r\n                                       
+    }\r\n                                    }\r\n                               
+    ]\r\n                            }\r\n                        }\r\n                   
+    ]\r\n                },\r\n                \"OnSectionDisableData\": {\r\n                   
+    \"$id\": 102,\r\n                    \"$type\": 14,\r\n                    \"FloatProperties\":
+    {\r\n                        \"$id\": 103,\r\n                        \"$type\":
+    15,\r\n                        \"$rlength\": 0,\r\n                        \"$rcontent\":
+    [\r\n                        ]\r\n                    },\r\n                   
+    \"ColorProperties\": {\r\n                        \"$id\": 104,\r\n                       
+    \"$type\": 16,\r\n                        \"$rlength\": 0,\r\n                       
+    \"$rcontent\": [\r\n                        ]\r\n                    },\r\n                   
+    \"TextureProperties\": {\r\n                        \"$id\": 105,\r\n                       
+    \"$type\": 17,\r\n                        \"$rlength\": 0,\r\n                       
+    \"$rcontent\": [\r\n                        ]\r\n                    },\r\n                   
+    \"Keywords\": {\r\n                        \"$id\": 106,\r\n                       
+    \"$type\": 18,\r\n                        \"$rlength\": 0,\r\n                       
+    \"$rcontent\": [\r\n                        ]\r\n                    },\r\n                   
+    \"OverrideTags\": {\r\n                        \"$id\": 107,\r\n                       
+    \"$type\": 19,\r\n                        \"$rlength\": 0,\r\n                       
+    \"$rcontent\": [\r\n                        ]\r\n                    },\r\n                   
+    \"SetRenderQueue\": false,\r\n                    \"RenderQueue\": -1\r\n               
+    }\r\n            }\r\n        ]\r\n    },\r\n    \"UVSets\": {\r\n        \"$id\":
+    108,\r\n        \"$type\": \"20|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.UVSet,
+    VRLabs.ToonyStandardRebuild]], mscorlib\",\r\n        \"$rlength\": 0,\r\n       
+    \"$rcontent\": [\r\n        ]\r\n    }\r\n}","unityGUIDReferences":[]}'

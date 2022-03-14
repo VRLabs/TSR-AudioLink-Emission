@@ -1,0 +1,44 @@
+{
+    "Properties": [
+        {
+            "Name": "Emission Section",
+            "DisplayName": "Emission Section",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Emission Section_Path",
+            "DisplayName": "Emission Section_Path",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Emission AudioLink Color",
+            "DisplayName": "Add AudioLink Color",
+            "Tooltip": "Adds AudioLink selected color to the emission by multiplying the color obtained from audiolink to the emission value"
+        },
+        {
+            "Name": "Disabled AudioLink Emission View",
+            "DisplayName": "Disabled AudioLink Emission View",
+            "Tooltip": ""
+        },
+        {
+            "Name": "AudioLink Emission Disabled Info",
+            "DisplayName": "Additional options are available by enabling AudioLink",
+            "Tooltip": ""
+        },
+        {
+            "Name": "Enabled AudioLink Emission View",
+            "DisplayName": "Enabled AudioLink Emission View",
+            "Tooltip": ""
+        },
+        {
+            "Name": "AudioLink Band Enabled",
+            "DisplayName": "Use AudioLink Band",
+            "Tooltip": "Use AudioLink band/intensity values to alter emission strength"
+        },
+        {
+            "Name": "AudioLink Band",
+            "DisplayName": "AudioLink Band",
+            "Tooltip": "AudioLink Value to use"
+        }
+    ]
+}

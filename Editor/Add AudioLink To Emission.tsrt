@@ -1,0 +1,4 @@
+void AddAudioLinkToEmission()
+{
+    Emission *= lerp(1, AudioLinkColor, _AudioLinkEmissionUseColor) * lerp(1, AudioLinkFloats[_AudioLinkEmissionBandIndex], _AudioLinkEmissionUseBand);
+}
