@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: VRLabs.TSR.Emission.AudioLink
   Name: AudioLink Emission
-  Version: 1.0
+  Version: master
   Author: VRLabs
   Description: AudioLink options for emission
   EnableProperties:
