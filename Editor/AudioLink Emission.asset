@@ -74,10 +74,8 @@ MonoBehaviour:
       CustomType: 
     VariableKeywords:
     - DEFAULT_VARIABLES
-    - META_VARIABLES
     CodeKeywords:
     - DEFAULT_CODE
-    - META_CODE
   AdditionalSerializedData: '{"module":"{\r\n    \"$id\": 0,\r\n    \"$type\": \"0|VRLabs.ToonyStandardRebuild.ModuleUI,
     VRLabs.ToonyStandardRebuild\",\r\n    \"Name\": \"AudioLink Emission\",\r\n   
     \"Sections\": {\r\n        \"$id\": 1,\r\n        \"$type\": \"1|System.Collections.Generic.List`1[[VRLabs.ToonyStandardRebuild.SectionUI,
